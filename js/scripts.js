@@ -2,15 +2,15 @@ var list = document.getElementById('list');
 var add = document.getElementById('addElem');
 
 function countElem() {
-	numberElem = document.getElementsByTagName('li');
-	numberElem = numberElem.length - 1;
+	var numberElem = document.getElementsByTagName('li').length;
 	return numberElem;
 }
 	
+
 function newElem() {
-	element = document.createElement('li');
-	list.appendChild(element);
+	var element = document.createElement('li');
 	element.innerHTML = "item " + countElem();
+	list.appendChild(element);
 }
 
 add.addEventListener('click', newElem);
